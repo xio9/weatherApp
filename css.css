@@ -1,0 +1,45 @@
+*{
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+}
+.container {
+  width: 85%;
+  max-width: 1256px;
+  margin: auto;
+}
+.ur-city{
+  text-align: center;
+  font-size: 36px;
+}
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+.btn-wrapper{
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.city-input{
+  margin: auto;
+}
+.add-city{
+  margin-top: 20px;
+  width: 60px;
+  height: 40px;
+}
+.city-card{
+  margin-top: 100px;
+  text-align: center;
+}
+.city-info{
+  display: flex;
+  flex-direction: column;
+}
+span{
+  margin-top: 15px;
+}

@@ -18,18 +18,22 @@ async function weatherApp(location){
 
 function generateCard(data){
   const cityName = data.location.name;
+  const status = data.current.weather_descriptions.map(item => item).join('');
   const currTemp = data.current.temperature;
   const cloudCover = data.current.cloudcover;
   const feelsLike = data.current.feelslike;
   const localTime = data.location.localtime;
   const wind = data.current.wind_speed;
+  const icon = data.current.weather_icons[0];
   const card = `
     <h2 class="city-name">${cityName}</h2>
+    <h3 class="temp-name">${status}</h3>
+    <img src="${icon}" alt="">
     <div class="city-info">
       <span class="temp">Температура: ${currTemp}</span>
       <span class="vis">Облачность: ${cloudCover}</span>
       <span class="feelsLike">Ощущается как: ${feelsLike}</span>
-      <span class="feelsLike">Ощущается как: ${wind}</span>
+      <span class="feelsLike">Скорость ветра: ${wind}</span>
       <span class="localTime">Местное время: ${localTime}</span>
     </div>
   `;
